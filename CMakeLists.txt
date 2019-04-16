@@ -19,7 +19,7 @@ find_package(PCL REQUIRED )
 catkin_package()
 
 add_subdirectory(src/HesaiLidarSDK)
-add_executable(hesai_lidar_node 
+add_executable(hesai_lidar_node
 	src/main.cc
 )
 
@@ -32,7 +32,8 @@ include_directories(
 
 
 
-target_link_libraries(hesai_lidar_node 
-	${catkin_LIBRARIES}
-  	hesaiLidarSDK
+target_link_libraries(hesai_lidar_node
+    ${catkin_LIBRARIES}
+    hesaiLidarSDK
+    glog
 )
